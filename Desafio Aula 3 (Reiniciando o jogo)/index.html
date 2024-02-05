@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.responsivevoice.org/responsivevoice.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&family=Inter:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>JS Game</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="container__conteudo">
+            <div class="container__informacoes">
+                <div class="container__texto">
+                    <h1>Desafio Aula 3</h1>
+                    <p class="texto__paragrafo"></p>
+                </div>
+                <br>
+                <div>
+                    <h2>Ex 1</h2>
+                    <p>Digite seu peso:</p>
+                    <input type="number" min="1" max="3" id="pesoInput" style="width: 60px">
+                    <p></p>
+                    <p>Digite sua altura:</p>
+                    <input type="number" min="1" max="4" id="alturaInput" style="width: 60px">
+                    <button onclick="calcImc()" class="container__botao">Calcular IMC</button>
+                    <h4 id="resultadoIMC"></h4>
+                </div>
+                <br>
+                <br>
+                <div>
+                    <!-- <h2>Ex 3</h2>
+                    <p>Digite seu valor em reais:</p>
+                    <input type="number" min="1" max="3" id="valorImput" style="width: 60px">
+                    <p></p>
+                    <button onclick="passDolar()" class="container__botao">Converter para Dolar</button>
+                    <h4 id="resultadoEmDolar"></h4> -->
+                    <h2>Ex 3</h2>
+                    <p>Digite seu valor em Dolar:</p>
+                    <input type="number" min="1" max="3" id="valorImput" style="width: 60px">
+                    <p></p>
+                    <button onclick="passReais(parseFloat(document.querySelector('#valorImput').value))" class="container__botao">Converter para Reais</button>
+                    <h4 id="resultadoEmReais"></h4>
+                </div>
+                <br>
+                <br>
+                <!-- <div>
+                    <h2>Ex 4</h2>
+                    <p>Digite o valor (cm) da altura do retângulo:</p>
+                    <input type="number" min="1" max="3" id="valorAltura" style="width: 60px">
+                    <p></p>
+                    <p>Digite o valor (cm) da largura do retângulo:</p>
+                    <input type="number" min="1" max="3" id="valorLargura" style="width: 60px">
+                    <p></p>
+                    <button onclick="calcRetangular()" class="container__botao">Calcular Retângulo</button>
+                    <h4 id="resultadoAreaPerim"></h4>
+                </div> -->
+                <div>
+                    <h2>Ex 4</h2>
+                    <p>Digite o valor (cm) da altura do retângulo:</p>
+                    <input type="number" min="1" max="3" id="valorAltura" style="width: 60px">
+                    <p></p>
+                    <p>Digite o valor (cm) da largura do retângulo:</p>
+                    <input type="number" min="1" max="3" id="valorLargura" style="width: 60px">
+                    <p></p>
+                    <button onclick="calcRetangular(parseFloat(document.querySelector('#valorAltura').value), parseFloat(document.querySelector('#valorLargura').value))" class="container__botao">Calcular Retângulo</button>
+                    <h4 id="resultadoRetangular"></h4>
+                </div>
+                <br>
+                <br>
+                <div>
+                    <h2>Ex 5</h2>
+                    <p>Digite o valor (cm) do raio do circulo:</p>
+                    <input type="number" min="1" max="3" id="valorRaio" style="width: 60px">
+                    <p></p>
+                    <button onclick="calcCircular(parseFloat(document.querySelector('#valorRaio').value))" class="container__botao">Calcular Circulo</button>
+                    <h4 id="resultadoCircular"></h4>
+                </div>
+                <br>
+                <br>      
+                <div>
+                    <h2>Ex 6</h2>
+                    <p>Digite um número inteiro:</p>
+                    <input type="number" min="1" max="3" id="numero" style="width: 60px">
+                    <p></p>
+                    <button onclick="criarTabuada(parseInt(document.querySelector('#numero').value))" class="container__botao">Calcular tabuada</button>
+                    <h4 id="resultadoTabuada"></h4>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js" defer></script>
+</body>
+
+</html>
